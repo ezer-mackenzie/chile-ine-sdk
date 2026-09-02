@@ -54,7 +54,7 @@ Changelog = "https://github.com/ezer-mackenzie/chile-ine-sdk/blob/main/CHANGELOG
 packages = [{ include = "chile_ine_sdk", from = "src" }]
 
 [tool.poetry.group.dev.dependencies]
-mypy = ">=1.10.0,<2.0.0"
+mypy = ">=2.3.1,<3.0.0"
 pre-commit = ">=4.0.0,<5.0.0"
 ruff = ">=0.8.0,<0.16.0"
 
