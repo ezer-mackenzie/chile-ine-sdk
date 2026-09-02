@@ -1,0 +1,72 @@
+site_name: Chile INE Python SDK
+site_description: Python SDK for the Chilean National Institute of Statistics (INE) APIs.
+site_url: https://ezer-mackenzie.github.io/chile-ine-sdk/
+repo_url: https://github.com/ezer-mackenzie/chile-ine-sdk
+repo_name: ezer-mackenzie/chile-ine-sdk
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+strict: false
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        es:
+          name: Español
+          build: true
+      nav_translations:
+        es:
+          Home: Inicio
+          Quickstart: Guía Rápida
+          Classifiers API: API Clasificadores
+          SIMEL API: API SIMEL
+          API Reference: Referencia API
+          Architecture: Arquitectura
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Classifiers API: classifiers.md
+  - SIMEL API: simel.md
+  - API Reference: api_reference.md
+  - Architecture: architecture.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
