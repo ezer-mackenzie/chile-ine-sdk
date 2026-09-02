@@ -43,6 +43,46 @@ class ClassifiersClient:
         )
         return cast(Dict[str, Any], res)
 
+    def predict_ciuo(
+        self,
+        text: Union[str, List[str]],
+        digits: DigitLevel = 1,
+        model_version: Union[str, int] = "latest",
+    ) -> Dict[str, Any]:
+        """Convenience method for CIUO (Occupations) classification.
+
+        :param text: Occupation description/tasks gloss.
+        :param digits: Digit detail level (1 or 2).
+        :param model_version: Model version.
+        :return: Classification JSON.
+        """
+        return self.predict(
+            text=text,
+            classification=ClassifierType.CIUO,
+            digits=digits,
+            model_version=model_version,
+        )
+
+    def predict_caenes(
+        self,
+        text: Union[str, List[str]],
+        digits: DigitLevel = 1,
+        model_version: Union[str, int] = "latest",
+    ) -> Dict[str, Any]:
+        """Convenience method for CAENES (Economic Activities) classification.
+
+        :param text: Economic activity description gloss.
+        :param digits: Digit detail level (1 or 2).
+        :param model_version: Model version.
+        :return: Classification JSON.
+        """
+        return self.predict(
+            text=text,
+            classification=ClassifierType.CAENES,
+            digits=digits,
+            model_version=model_version,
+        )
+
     def get_model_metadata(self) -> Dict[str, Any]:
         """Obtain metadata for available classification models.
 
@@ -85,6 +125,46 @@ class AsyncClassifiersClient:
             json=payload.model_dump(mode="json"),
         )
         return cast(Dict[str, Any], res)
+
+    async def predict_ciuo(
+        self,
+        text: Union[str, List[str]],
+        digits: DigitLevel = 1,
+        model_version: Union[str, int] = "latest",
+    ) -> Dict[str, Any]:
+        """Convenience async method for CIUO (Occupations) classification.
+
+        :param text: Occupation description/tasks gloss.
+        :param digits: Digit detail level (1 or 2).
+        :param model_version: Model version.
+        :return: Classification JSON.
+        """
+        return await self.predict(
+            text=text,
+            classification=ClassifierType.CIUO,
+            digits=digits,
+            model_version=model_version,
+        )
+
+    async def predict_caenes(
+        self,
+        text: Union[str, List[str]],
+        digits: DigitLevel = 1,
+        model_version: Union[str, int] = "latest",
+    ) -> Dict[str, Any]:
+        """Convenience async method for CAENES (Economic Activities) classification.
+
+        :param text: Economic activity description gloss.
+        :param digits: Digit detail level (1 or 2).
+        :param model_version: Model version.
+        :return: Classification JSON.
+        """
+        return await self.predict(
+            text=text,
+            classification=ClassifierType.CAENES,
+            digits=digits,
+            model_version=model_version,
+        )
 
     async def get_model_metadata(self) -> Dict[str, Any]:
         """Obtain metadata for available classification models asynchronously.

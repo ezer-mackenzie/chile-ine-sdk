@@ -1,8 +1,8 @@
 """Pydantic models for INE Classifiers API (CIUO and CAENES)."""
 
 from enum import StrEnum
-from typing import Any, Dict, List, Literal, Union
-from pydantic import BaseModel, Field
+from typing import Any, Dict, List, Literal, Optional, Union
+from pydantic import BaseModel, Field, field_validator
 
 
 class ClassifierType(StrEnum):
@@ -35,13 +35,21 @@ class PredictionRequest(BaseModel):
         description="Model version to use for prediction.",
     )
 
+    @field_validator("classification", mode="before")
+    @classmethod
+    def normalize_classification(cls, v: Any) -> Any:
+        if isinstance(v, str):
+            return v.lower()
+        return v
+
 
 class PredictionItem(BaseModel):
     """Individual prediction result."""
 
-    gloss: str = Field(..., description="Input text gloss.")
+    gloss: Optional[str] = Field(default=None, description="Input text gloss.")
     code: str = Field(..., description="Predicted code.")
     probability: float = Field(..., description="Model confidence probability.")
+    label: Optional[str] = Field(default=None, description="Descriptive category label if available.")
     details: Dict[str, Any] = Field(default_factory=dict)
 
 
@@ -49,4 +57,7 @@ class PredictionResult(BaseModel):
     """Overall response for classification prediction."""
 
     predictions: List[PredictionItem] = Field(default_factory=list)
+    classification: Optional[ClassifierType] = Field(default=None)
+    digits: Optional[DigitLevel] = Field(default=None)
+    model_version: Optional[str] = Field(default=None)
     raw_response: Dict[str, Any] = Field(default_factory=dict)
