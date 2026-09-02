@@ -3,8 +3,8 @@
 from typing import Any, Dict, Optional
 import httpx
 
-from ine_sdk.config import DEFAULT_MAX_RETRIES, DEFAULT_TIMEOUT, USER_AGENT
-from ine_sdk.exceptions import INEAPIError, INERateLimitError
+from chile_ine_sdk.config import DEFAULT_MAX_RETRIES, DEFAULT_TIMEOUT, USER_AGENT
+from chile_ine_sdk.exceptions import INEAPIError, INERateLimitError
 
 
 class HTTPClient:

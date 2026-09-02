@@ -1,6 +1,6 @@
 # API Reference
 
-## `ine_sdk.INEClient`
+## `chile_ine_sdk.INEClient`
 
 Unified synchronous client for INE APIs.
 
@@ -15,7 +15,7 @@ class INEClient:
     def simel() -> SIMELClient: ...
 ```
 
-## `ine_sdk.AsyncINEClient`
+## `chile_ine_sdk.AsyncINEClient`
 
 Unified asynchronous client for INE APIs.
 
@@ -29,3 +29,7 @@ class AsyncINEClient:
     @property
     def simel() -> AsyncSIMELClient: ...
 ```
+
+## `chile_ine_sdk.http.HTTPClient`
+
+Public HTTP client wrapper for custom transports or direct requests.

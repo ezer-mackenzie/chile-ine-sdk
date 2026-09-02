@@ -51,7 +51,7 @@ Issues = "https://github.com/ezer-mackenzie/chile-ine-sdk/issues"
 Changelog = "https://github.com/ezer-mackenzie/chile-ine-sdk/blob/main/CHANGELOG.md"
 
 [tool.poetry]
-packages = [{ include = "ine_sdk", from = "src" }]
+packages = [{ include = "chile_ine_sdk", from = "src" }]
 
 [tool.poetry.group.dev.dependencies]
 mypy = ">=1.10.0,<2.0.0"
@@ -76,7 +76,7 @@ asyncio_default_fixture_loop_scope = "function"
 
 [tool.coverage.run]
 branch = true
-source = ["ine_sdk"]
+source = ["chile_ine_sdk"]
 
 [tool.coverage.report]
 show_missing = true
@@ -89,7 +89,7 @@ exclude_also = [
 
 [tool.mypy]
 python_version = "3.12"
-packages = ["ine_sdk"]
+packages = ["chile_ine_sdk"]
 strict = true
 warn_unreachable = true
 

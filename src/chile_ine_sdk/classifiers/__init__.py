@@ -1,7 +1,7 @@
 """INE Classifiers API module (CIUO and CAENES ML classifiers)."""
 
-from ine_sdk.classifiers.client import AsyncClassifiersClient, ClassifiersClient
-from ine_sdk.classifiers.models import (
+from chile_ine_sdk.classifiers.client import AsyncClassifiersClient, ClassifiersClient
+from chile_ine_sdk.classifiers.models import (
     ClassifierType,
     DigitLevel,
     PredictionItem,

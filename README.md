@@ -1,4 +1,4 @@
-# Chile INE Python SDK (`chile-ine-sdk`)
+# Chile INE Python SDK (`chile_ine_sdk`)
 
 [![PyPI version](https://img.shields.io/pypi/v/chile-ine-sdk.svg)](https://pypi.org/project/chile-ine-sdk/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/chile-ine-sdk.svg)](https://pypi.org/project/chile-ine-sdk/)
@@ -38,7 +38,7 @@ pip install "chile-ine-sdk[dataframe]"
 ## Quickstart
 
 ```python
-from ine_sdk import INEClient
+from chile_ine_sdk import INEClient
 
 # Initialize unified INE client
 client = INEClient()

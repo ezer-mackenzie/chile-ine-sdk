@@ -1,7 +1,7 @@
 """Synchronous and Asynchronous clients for INE SIMEL API."""
 
 from typing import Any, Dict, List, Optional, cast
-from ine_sdk._http import AsyncHTTPClient, HTTPClient
+from chile_ine_sdk.http import AsyncHTTPClient, HTTPClient
 
 
 class SIMELClient:

@@ -1,11 +1,11 @@
 """Pydantic models for INE Classifiers API (CIUO and CAENES)."""
 
-from enum import Enum
+from enum import StrEnum
 from typing import Any, Dict, List, Literal, Union
 from pydantic import BaseModel, Field
 
 
-class ClassifierType(str, Enum):
+class ClassifierType(StrEnum):
     """Classifier taxonomy name."""
 
     CIUO = "ciuo"

@@ -1,12 +1,12 @@
 """Synchronous and Asynchronous clients for INE Classifiers API."""
 
 from typing import Any, Dict, List, Union, cast
-from ine_sdk._http import AsyncHTTPClient, HTTPClient
-from ine_sdk.classifiers.models import (
+from chile_ine_sdk.classifiers.models import (
     ClassifierType,
     DigitLevel,
     PredictionRequest,
 )
+from chile_ine_sdk.http import AsyncHTTPClient, HTTPClient
 
 
 class ClassifiersClient:

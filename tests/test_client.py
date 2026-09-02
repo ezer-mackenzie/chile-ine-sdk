@@ -2,9 +2,9 @@
 
 import pytest
 import respx
+from chile_ine_sdk import AsyncINEClient, INEClient
+from chile_ine_sdk.classifiers import ClassifierType
 from httpx import Response
-from ine_sdk import AsyncINEClient, INEClient
-from ine_sdk.classifiers import ClassifierType
 
 
 def test_ine_client_initialization() -> None:

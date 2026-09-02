@@ -1,10 +1,10 @@
 """Unified main SDK entry point exposing INE Classifiers and SIMEL API clients."""
 
 from typing import Optional
-from ine_sdk._http import AsyncHTTPClient, HTTPClient
-from ine_sdk.classifiers.client import AsyncClassifiersClient, ClassifiersClient
-from ine_sdk.config import CLASSIFIERS_BASE_URL, DEFAULT_MAX_RETRIES, DEFAULT_TIMEOUT, SIMEL_BASE_URL
-from ine_sdk.simel.client import AsyncSIMELClient, SIMELClient
+from chile_ine_sdk.classifiers.client import AsyncClassifiersClient, ClassifiersClient
+from chile_ine_sdk.config import CLASSIFIERS_BASE_URL, DEFAULT_MAX_RETRIES, DEFAULT_TIMEOUT, SIMEL_BASE_URL
+from chile_ine_sdk.http import AsyncHTTPClient, HTTPClient
+from chile_ine_sdk.simel.client import AsyncSIMELClient, SIMELClient
 
 
 class INEClient:

@@ -1,6 +1,6 @@
 # Guía Rápida
 
-Comienza a utilizar `chile-ine-sdk` en Python en pocos pasos.
+Comienza a utilizar `chile_ine_sdk` en Python en pocos pasos.
 
 ## Instalación
 
@@ -19,7 +19,7 @@ pip install "chile-ine-sdk[dataframe]"
 ## Uso Básico
 
 ```python
-from ine_sdk import INEClient
+from chile_ine_sdk import INEClient
 
 client = INEClient()
 

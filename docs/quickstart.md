@@ -1,6 +1,6 @@
 # Quickstart Guide
 
-Get up and running with `chile-ine-sdk` in Python.
+Get up and running with `chile_ine_sdk` in Python.
 
 ## Installation
 
@@ -19,7 +19,7 @@ pip install "chile-ine-sdk[dataframe]"
 ## Basic Usage
 
 ```python
-from ine_sdk import INEClient
+from chile_ine_sdk import INEClient
 
 client = INEClient()
 
@@ -44,7 +44,7 @@ print("CAENES Prediction:", caenes_res)
 
 ```python
 import asyncio
-from ine_sdk import AsyncINEClient
+from chile_ine_sdk import AsyncINEClient
 
 async def main():
     async with AsyncINEClient() as client:
